@@ -1,0 +1,28 @@
+﻿<Window x:Class="Genshot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Genshot"
+        mc:Ignorable="d"
+        Background="{DynamicResource BackgroundColor}"  
+        Title="Genshot" Height="150" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="BackgroundColor" Color="#1E1E1E" />
+            <SolidColorBrush x:Key="TBColor" Color="#232323" />
+            <SolidColorBrush x:Key="ForegroundColor" Color="#FFFFFF" />
+            <Style TargetType="Label">
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+    <StackPanel HorizontalAlignment="Stretch" Height="NaN" Margin="5,5,5,0" VerticalAlignment="Stretch" Width="NaN">
+        <Label>Welcome to Genshot!</Label>
+        <Label>To get started, please point to the game's screenshot folder:</Label>
+        <TextBox x:Name="game_path_tb" Background="{StaticResource TBColor}" Margin="5 5 5 5" MouseDoubleClick="select_game_folder" IsReadOnly="True"></TextBox>
+    </StackPanel>
+</Window>
